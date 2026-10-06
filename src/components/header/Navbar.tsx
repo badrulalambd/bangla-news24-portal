@@ -18,6 +18,7 @@ const Navbar = async () => {
 
         const filteredCategories : ICategory[] = categories.filter((category : ICategory) => category.scrapable);
 
+
     return (
         <header className="py-4 px-5">
             <div className="relative max-w-7xl mx-auto flex justify-center items-start gap-4">
@@ -40,8 +41,8 @@ const Navbar = async () => {
 
             <nav className="max-w-7xl mx-auto mt-6 flex justify-center gap-5 overflow-x-auto">
                 {
-                    filteredCategories.map((category : ICategory) => (
-                        <Link key={category.topicId} href={`news/${category.title}`} className='hover:text-red-600' >{category.title}</Link>
+                    filteredCategories.map((ncategory : ICategory) => (
+                        <Link key={ncategory.topicId} href={`/category/${ncategory.title}`} className='hover:text-red-600' >{ncategory.title}</Link>
                     ))
                 }
             </nav>
