@@ -16,12 +16,7 @@ const Navbar = async () => {
         const data = await res.json();
         const categories = data.data;
 
-        console.log("Categories Data:", categories);
-
         const filteredCategories : ICategory[] = categories.filter((category : ICategory) => category.scrapable);
-
-        console.log("Filtered Categories:", filteredCategories);
-
 
     return (
         <header className="py-4 px-5">
