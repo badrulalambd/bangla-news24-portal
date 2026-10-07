@@ -1,6 +1,7 @@
-import CategoryNewsGrid from "@/components/newsgrid/CategoryNewsGrid";
+import CategoryNewsGrid from "@/components/newsgrid/CategoryNewsCard";
 import MainNewsLarge from "@/components/newsgrid/MainNewsLarge";
 import MostReadNewsList from "@/components/newsgrid/MostReadNewsList";
+import NewsCard from "@/components/newsgrid/NewsCard";
 
 interface ICategory {
   title: string;
@@ -44,7 +45,7 @@ export default async function Home() {
                     {
                       category.articles.map((article) => (
                         <div key={article.id} className="flex flex-col gap-2 bg-white border border-gray-300 rounded-lg">
-                          <CategoryNewsGrid
+                          <NewsCard
                             article={article}
                           />
                         </div>

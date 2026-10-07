@@ -1,4 +1,4 @@
-import CategoryNewsGrid from "@/components/newsgrid/CategoryNewsGrid";
+import CategoryNewsGrid from "@/components/newsgrid/CategoryNewsCard";
 
 interface IProps {
   params: Promise<{

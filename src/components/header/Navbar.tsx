@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface ICategory {
+    slug: string;
     title: string;
     topicId: string | null;
     url: string;
@@ -42,7 +43,7 @@ const Navbar = async () => {
             <nav className="max-w-7xl mx-auto mt-6 flex justify-center gap-5 overflow-x-auto">
                 {
                     filteredCategories.map((ncategory : ICategory) => (
-                        <Link key={ncategory.topicId} href={`/category/${ncategory.title}`} className='hover:text-red-600' >{ncategory.title}</Link>
+                        <Link key={ncategory.topicId} href={`/category/${ncategory.slug}`} className='hover:text-red-600' >{ncategory.title}</Link>
                     ))
                 }
             </nav>
